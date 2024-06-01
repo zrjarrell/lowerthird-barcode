@@ -9,5 +9,4 @@ class Person:
         return self.firstName + " " + self.lastName
 
     def printInfo(self):
-        print(f"Name: {self.fullName()}")
-        print(self.superlative)
+        print(f"\nName: {self.fullName()}\n{self.superlative}\n")
