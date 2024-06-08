@@ -1,5 +1,4 @@
 import pandas as pd
-import tkinter as tk
 from tkinter import filedialog
 
 from customClasses import Person
@@ -9,6 +8,7 @@ def prepareInitialDictionary():
     table = pd.read_csv(tablePath, sep=",")
     for column in table.columns:
         table[column] = table[column].str.title()
+    table.sort_values(by=['lastName', 'firstName'], inplace=True, ignore_index=True)
     personDict = {}
     for i in range(0, len(table.index)):
         personDict[makeIDstring(i)] = Person(table.loc[i, "firstName"], table.loc[i, "lastName"], table.loc[i, "superlative"], i)

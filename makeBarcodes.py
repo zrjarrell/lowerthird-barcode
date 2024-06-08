@@ -8,3 +8,4 @@ def makeBarcodes(personDict):
     for key in personDict:
         newBarcode = upc(key, writer=ImageWriter())
         newBarcode.render(text=personDict[key].fullName()).save(barcodeDir + '/' + key + '.png')
+        personDict[key].barcodePath = barcodeDir + '/' + key + '.png'

@@ -18,7 +18,6 @@ def watchForCodes(personDict):
 
 
 import cv2 as cv
-import numpy as np
 
 img=cv.imread('lowerthirdNamed.tiff')
 while True:
