@@ -3,7 +3,8 @@
 **/fonts
 **/__pycache__
 
-.DS_Store
-lowerthird.tiff
-lowerthirdNamed.tiff
+*.DS_Store
+*.tiff
 *.docx
+*.json
+*.txt
