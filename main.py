@@ -1,12 +1,7 @@
-from prepareDictionary import prepareInitialDictionary
-from setupScanner import createConnection
-from makeBarcodes import makeBarcodes
-from monitorScanner import monitorScanner
+import json
 
+f = open('personDict.json',)
+personDict = json.load(f)
 
-
-
-personDict = prepareInitialDictionary('/Users/zrj/repos/lowerthird-barcode/sampleTable.csv')
-scanner = createConnection('/dev/cu.usbmodem144101')
-
-monitorScanner(scanner)
+import shutil
+shutil.copyfile('queue_filled.txt', 'queue.txt')
