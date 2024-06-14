@@ -16,7 +16,7 @@ class Node:
         self.key = key
         self.next = None
 
-class Queue:
+class CustomQueue:
     def __init__(self, list=None):
         if list:
             for i in range(0, len(list)):
@@ -43,7 +43,7 @@ class Queue:
         else:
             self.tail.next = Node(key)
             self.tail = self.tail.next
-    
+
     def dequeue(self):
         if not self.head:
             print("No values in queue.")
